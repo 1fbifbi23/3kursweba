@@ -177,3 +177,7 @@ def example():
         {'name': 'Метро 2033', 'author': 'Дмитрий Глуховский', 'size': '416 страниц'}
         ]
     return render_template('example.html', name=name, course=course, group=group, number_laboratory=number_laboratory, fruits=fruits, books=books)
+
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')
