@@ -156,7 +156,7 @@ def choice():
 def example():
     name = 'Ларионов Даниил Сергеевич'
     course = '2 курс'
-    group = 'ФБИ-14'
+    group = 'ФБИ-12'
     number_laboratory = '2'
     fruits = [
         {'name': 'Яблоки', 'price': 100},
