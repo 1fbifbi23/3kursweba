@@ -153,4 +153,7 @@ def choice():
 @app.route('/lab2/example')
 def example():
     name = 'Ларионов Даниил Сергеевич'
-    return render_template('example.html', name=name)
+    course = '2 курс'
+    group = 'ФБИ-14'
+    number_laboratory = '2'
+    return render_template('example.html', name=name, course=course, group=group, number_laboratory=number_laboratory)
