@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная 2{% endblock %}
+
+{% block main%}
+    <div>
+        <div><h1>Языки программирования</h1></div>
+        <div>
+            <h1> JavaScrpit</h1>
+            <div class="images"><img src="{{ url_for('static', filename='1.jpg') }}" width="400px", height="200px"></div>
+            <div>Описание: Простое - 1+1 = 11</div>
+        </div>
+        <div>
+            <h1> Python</h1>
+            <div class="images"><img src="{{ url_for('static', filename='2.jpeg') }}" width="400px", height="200px"></div>
+            <div>Описание: Еще проще - Python классно</div>
+        </div>
+        <div>
+            <h1> C++ </h1>
+            <div class="images"><img src="{{ url_for('static', filename='3.jpg') }}" width="400px", height="200px"></div>
+            <div>Описание: Для любителей писать ПО</div>
+        </div>
+        <div>
+            <h1> Ruby</h1>
+            <div class="images"><img src="{{ url_for('static', filename='4.png') }}" width="400px", height="200px"></div>
+            <div>Описание: Проще питона?</div>
+        </div>
+        <div>
+            <h1> Java</h1>
+            <div class="images"><img src="{{ url_for('static', filename='5.jpg') }}" width="400px", height="200px"></div>
+            <div>Описание: Можно создать minecraft</div>
+        </div>
+    </div>
+    <div style="margin-top: 100px;"></div>
+{% endblock %}

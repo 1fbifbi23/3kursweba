@@ -19,8 +19,10 @@ def menu():
         <header>
             НГТУ, ФБ, WEB-программирование, часть 2. Список лабораторных
         </header>
-        <a href='/lab1'>Лабораторная 1</a>
-
+          <div id='labs'> Лабораторные работы
+            <li><a href='/lab1'>Лабораторная 1</a></li>
+            <li><a href='/lab2/'>Лабораторная 2</a></li>
+        </div>
         <div id='rout'>
             <h1>Реализованные Роуты</h1>
             <ol>
@@ -181,3 +183,7 @@ def example():
 @app.route('/lab2/')
 def lab2():
     return render_template('lab2.html')
+
+@app.route('/lab2/language')
+def language():
+    return render_template('language.html')
