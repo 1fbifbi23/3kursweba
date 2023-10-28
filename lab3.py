@@ -47,3 +47,17 @@ def pay():
 @lab3.route('/lab3/success')
 def success():
     return render_template('success.html')
+
+
+@lab3.route('/lab3/ticket')
+def ticket():
+    full_name = request.args.get('full_name')
+    age = request.args.get('age')
+    ticket_type = request.args.get('ticket_type')
+    bunk = request.args.get('bunk')
+    luggage = request.args.get('luggage')
+    departure_point = request.args.get('departure_point')
+    destination = request.args.get('destination')
+    travel_date = request.args.get('travel_date')
+    return render_template("ticket.html", full_name=full_name, age=age, ticket_type=ticket_type, bunk=bunk,luggage=luggage,departure_point=departure_point,
+                           destination=destination,travel_date=travel_date)
