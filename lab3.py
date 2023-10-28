@@ -9,4 +9,7 @@ def lab():
 
 @lab3.route('/lab3/form1')
 def form1():
-    return render_template('form1.html')
+    user = request.args.get('user')
+    age = request.args.get('age')
+    sex = request.args.get('sex')
+    return render_template('form1.html', user=user, age=age, sex=sex)
