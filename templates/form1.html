@@ -17,19 +17,21 @@
     <form action="">
         <label for="">Ваше имя:</label>
         <div>
-            <input type="text" placeholder="Как вас зовут?", name="user">
+            <input type="text" placeholder="Как вас зовут" name="user" value="{{ user or '' }}">
+            <span class="error">{{ errors.user }}</span>
         </div>
 
         <label for="">Ваш возраст: </label>
         <div>
-            <input type="number" placeholder="Ваш возраст" name="age">
+            <input type="number" placeholder="Ваш возраст" name="age" value="{{ age or '' }}">
+            <span class="error">{{ errors.age }}</span>
         </div>
 
         <label for="">Ваш Пол: </label>
         <div>
             <select name="sex" id="">
-                <option value="male">Мужчина</option>
-                <option value="female">Женщина</option>
+                <option value="male" {{ sex == 'male' and 'selected' }}>Мужчина</option>
+                <option value="female" {{ sex == 'female' and 'selected' }}>Женщина</option>
             </select>
         </div>
 
@@ -38,9 +40,11 @@
             <button type="submit">Отправить</button>
         </div>
 
-
-
     </form>
+
+    <div style="margin-top: 30px;">
+        <a href="/lab3/">Вернуться</a>
+    </div>
 
     {% endif %}
 {% endblock %}
