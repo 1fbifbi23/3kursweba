@@ -7,8 +7,19 @@
     <h1>Cookies</h1>
     <form action="" method="post">
         <div>
+            <div>
+                {{ message }}
+            </div>
             <label for="color">Выберите цвет: </label>
-            <input type="color" name="color" id="color">
+            <input type="color" name="color" id="color" value="{{ request.cookies.get('color') }}">
+        </div>
+        <div>
+            <label for="background_color">Выберите цвет фона: </label>
+            <input type="color" name="background_color" id="background_color" value="{{ request.cookies.get('background-color') }}">
+        </div>
+        <div>
+            <label for="font_size">Выберите размер: </label>
+            <input type="number" name="font_size" id="font_size" value="{{ request.cookies.get('font_size') }}" min="5" max="30">
         </div>
         <div>
             <button type="submit">OK</button>

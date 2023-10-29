@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css' ) }}">
     <title>Ларионов Даниил Сергеевич {% block lab %}{% endblock %}</title>
-    {% if request.cookies.get('color') %}
+    {% if request.cookies.get('color') and request.cookies.get('background_color') and request.cookies.get('font_size') %}
     <style>
 
         body{
             color: {{ request.cookies.get('color') }};
+            background-color: {{ request.cookies.get('background_color') }};
+            font-size: {{ request.cookies.get('font_size') }}px;
         }
 
     </style>
