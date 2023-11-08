@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная 5{% endblock %}
+
+{% block main%}
+    <h1>Flask и БД<h1>
+    <ol>
+        <li><a href="">Просмотреть заметки</a></li>
+        <li><a href="">Создать заметки</a></li>
+        <li><a href="">Логин</a></li>
+        <li><a href="">Регистрация</a></li>
+        <div>
+            {% if username %} {{ username }} {% else %} Anonim {% endif %}
+        </div>
+    </ol>
+{% endblock %}
