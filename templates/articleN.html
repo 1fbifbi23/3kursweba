@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block lab %} Лабораторная работа 5 {% endblock %}
+
+{% block main %}
+    <div class="databaselab5">
+        <div>
+        Пользователь: {% if username %} {{ username }} {% else %} Anonim {% endif %}
+        </div>
+        <form action="/lab5/articles">
+            <button class="button_user" type="submit">Заметки</button>
+        </form>
+        <form action="/lab5/newtitle">
+            <button class="button_user" type="submit">Создать заметки</button>
+        </form>
+        <form action="/lab5/login5">
+            <button class="button_user" type="submit">Логин</button>
+        </form>
+        <form action="/lab5/registration">
+            <button class="button_user" type="submit">Регистрация</button>
+        </form>
+        <form action="/lab5/logout">
+            <button class="button_user" type="submit">Выйти</button>
+        </form>
+        
+
+
+        <div>
+            <h1>{{ article_title }}</h1>
+            {% for paragraph in article_text %}
+            <p> {{ paragraph }} </p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

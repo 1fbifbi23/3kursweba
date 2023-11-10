@@ -4,24 +4,24 @@
 
 {% block main %}
 
-    <h2>Пожалуйста, авторизуйтесь</h2>
-    <div>
-        {% for error in errors %}
-            {{ error }}
-        {% endfor %}
-    </div>
     <form method="post">
+        <h1>Пожалуйста, авторизуйтесь</h1>
         <div>
+            {% for error in errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        <div class="input_label">
             <label for="username">Пользователь</label>
             <input type="text" id="username" name="username" value="{{ username or '' }}">
         </div>
-        <div>
+        <div class="input_label">
             <label for="password">Пароль</label>
             <input type="password" id="password" name="password" value="{{ password or '' }}">
         </div>
         <div>
-            <button type="submit">Войти</button>
-            <button type="reset">Отмена</button>
+            <button type="submit" class="button_user">Войти</button>
+            <button type="reset" class="button_user">Отмена</button>
         </div>
     </form>
 {% endblock %}
